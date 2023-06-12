@@ -23,7 +23,7 @@ namespace ModalModelessPrac
         public Form1()
         {
             InitializeComponent();
-            IsMdiContainer = true; //자식이 mdi를 가진다는 말
+            //IsMdiContainer = true; //자식이 mdi를 가진다는 말
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,8 +46,14 @@ namespace ModalModelessPrac
         private void button2_Click(object sender, EventArgs e)
         {
             CustomForm form = new CustomForm();
-            form.MdiParent = this; //커스텀 폼 띄우기 this는 form1(부모)
+            //form.MdiParent = this; //커스텀 폼 띄우기 this는 form1(부모)
             form.Show(); //모달리스
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form2 form = new Form2();
+            form.ShowDialog();
         }
     }
 }
